@@ -1,0 +1,508 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: black;
+  color: white;
+}
+.load-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fdba2c;
+}
+.bar {
+    content: "";
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    left: 50%;
+    text-align: center;
+}
+@keyframes loading {
+  from {left: 50%;
+    width: 0;
+    z-index: 100;}
+
+    33.3333% {
+      left: 0;
+      width: 100%;
+      z-index: 10;
+  }
+
+  to {left: 0;
+    width: 100%;}
+}
+.bar:nth-child(1) {
+  background-color: #da4733;
+  animation: loading 3s linear infinite;
+}
+.bar:nth-child(2) {
+  background-color: #3b78e7;
+  animation: loading 3s linear 1s infinite;
+}
+.bar:nth-child(3) {
+  background-color: #fdba2c;
+  animation: loading 3s linear 2s infinite;
+}
+
+.left-container {
+  overflow-x: hidden;
+  height: 88%;
+  max-width: 16%;
+  overflow-y: scroll;
+  position: fixed;
+  top: 3.5rem;
+  padding: 1rem 0.7rem 0 0.4rem;
+}
+
+.left-container::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+.left-container::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+
+.left-container::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  border-radius: 9px;
+  background: rgb(155, 152, 157);
+  background-clip: content-box;
+}
+
+.left-nav {
+  margin: 0 1.1rem 0 1.2rem;
+  font-size: 14px;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.left-item {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  border-radius: 0.5rem;
+}
+
+.left-item:hover {
+  display: flex;
+  padding: 9px;
+  background: #a89d9d;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.hov {
+  background: #a89d9d;
+}
+
+.left-item-icon {
+  display: flex;
+  padding-right: 1.2rem;
+  margin: 2px 0 0;
+  font-size: 19px;
+}
+
+.border {
+  margin: 1.3rem 0;
+  border-color: rgb(255 255 255 / 20%);
+}
+
+hr {
+  color: inherit;
+  border-top-width: 0px;
+}
+
+.author-detail {
+  font-size: 12px;
+  color: gray;
+}
+
+.main-container {
+  display: flex;
+  position: relative;
+}
+
+.feed-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  position: absolute;
+  top: 5rem;
+  left: 16rem;
+  width: 82%;
+}
+.video-container a {
+  text-decoration: none;
+}
+.thumbnail {
+  width: 18.6rem;
+  height: 10rem;
+}
+.Header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: black;
+}
+.Header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.55rem 1.2rem;
+  align-items: center;
+  column-gap: 21rem;
+}
+.logo {
+}
+.logo-image {
+}
+.web-image {
+  width: 6rem;
+  margin-left: 0.2rem;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+.input-field {
+}
+.input {
+  font-size: 16px;
+  width: 33rem;
+  padding: 12px 12px 12px 22px;
+  border: 1px solid #6d6a6a;
+  border-radius: 29px 0 0 29px;
+  background: transparent;
+  box-sizing: border-box;
+  outline: none;
+  color: white;
+}
+.input:focus {
+  border: 1px solid #30517c;
+}
+.search-icon {
+  border: 1px solid #6d6a6a;
+  border-radius: 0 29px 29px 0;
+  border-left: none;
+  padding: 11px 0 11px 18px;
+  outline: none;
+  background-color: #2b2b2b;
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  width: 60px;
+  color: white;
+}
+.search-button {
+}
+.side-icon {
+  display: flex;
+  column-gap: 1.4rem;
+  font-size: 22px;
+  align-items: center;
+}
+.create-content {
+}
+.notification {
+}
+.account {
+}
+.account img {
+  width: 2rem;
+  border-radius: 1rem;
+}
+.c-body-icon img {
+  width: 2.25rem;
+  border-radius: 3rem;
+}
+.card-body {
+  display: flex;
+  padding-top: 0.5rem;
+}
+
+.card-icon-box {
+}
+.c-body-icon {
+}
+.icon {
+}
+.card-container {
+  color: white;
+  padding-left: 1rem;
+}
+.card-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+.card-badge {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  color: gray;
+  padding-top: 0.65rem;
+}
+.card-views {
+  font-size: 12px;
+  font-weight: 500;
+  color: gray;
+  display: flex;
+  padding-top: 3px;
+  gap: 3px;
+}
+.card-dot {
+  line-height: 18px;
+  font-size: 34px;
+  margin-top: -0.7rem;
+}
+.video-thumbnail {
+  position: relative;
+}
+.video-thumbnail img {
+  border-radius: 0.9rem;
+}
+.video-card {
+  margin-bottom: 2rem;
+}
+
+/* Single page Video */
+.Single-Container {
+  margin: 3rem 5.4rem 0;
+}
+.Single-box {
+  padding: 2rem 2rem 0;
+  display: flex;
+}
+.main-video {
+  width: 70%;
+  padding: 1rem;
+}
+.player {
+  height: 31rem;
+}
+.Single-title {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 16px 0;
+}
+.Single-vid-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Single-left {
+  display: flex;
+}
+.Single-channel-icon {
+  margin-top: 3px;
+}
+.Single-icon {
+  border-radius: 3rem;
+  width: 3rem;
+}
+.Single-channel-details {
+  padding: 4px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.Single-Channel-name {
+  font-size: 15px;
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+}
+.Single-Channel-subscriber {
+  font-size: 14px;
+  font-weight: 400;
+}
+.single-verified {
+  padding: 3px 7px 0px 7px;
+  font-size: 12px;
+  color: gray;
+}
+
+.Single-right {
+  display: flex;
+  align-items: center;
+}
+.Single-Like {
+  background-color: #2b2b2b;
+  border-radius: 3rem;
+  padding: 0.8rem 2rem;
+  margin: 0 1.2rem;
+  align-items: center;
+  display: flex;
+}
+.Like-logo {
+  font-size: 20px;
+  padding: 0px 6px;
+}
+.Single-View {
+  background-color: #2b2b2b;
+  border-radius: 3rem;
+  padding: 0.8rem 2rem;
+}
+
+/* Related video */
+.Related-video-box {
+  overflow-x: hidden;
+  height: 41.6rem;
+  width: 30%;
+  overflow-y: scroll;
+  padding: 0 1rem;
+}
+
+.Related-video-box a {
+  text-decoration: none;
+  color: white;
+}
+
+.Related-video-box::-webkit-scrollbar {
+  width: 0.9rem;
+}
+
+.Related-video-box::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+
+.Related-video-box::-webkit-scrollbar-thumb {
+  border: 4px solid transparent;
+  border-radius: 9px;
+  background: rgb(155, 152, 157);
+  background-clip: content-box;
+}
+.Related-Container {
+  padding: 5px 0;
+  display: flex;
+}
+.Related-img-box {
+  position: relative;
+}
+.Related-img {
+  border-radius: 0.5rem;
+  width: 10.7rem;
+  height: 6rem;
+}
+.Related-Details {
+  padding: 0.1rem 0 0.1rem 0.7rem;
+}
+.Related-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+.Related-channel-name {
+  font-size: 12px;
+  color: gray;
+  font-weight: 700;
+  padding-top: 2px;
+}
+.Related-Like-logo {
+}
+.Related-views {
+  font-size: 12px;
+  color: gray;
+  font-weight: 600;
+  display: flex;
+  align-items: baseline;
+}
+.Related-dot {
+  line-height: 0px;
+  font-size: 34px;
+  padding: 3px;
+}
+.Related-time {
+}
+.Video-duration {
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  background: black;
+  padding: 0 6px 1px;
+  border-radius: 6px;
+  bottom: 12px;
+  right: 6px;
+}
+
+.Search-items {
+  position: absolute;
+  top: 4.4rem;
+  left: 16.3rem;
+  margin-right: 1.2rem;
+}
+.Search-items a {
+  text-decoration: none;
+  color: white;
+}
+
+.Svid-box {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.Svid-box:hover {
+  background-color: #2b2b2b;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.Svid-img {
+  margin-right: 1.5rem;
+  position: relative;
+}
+.Search-Svid-img {
+  border-radius: 1.1rem;
+  width: 20.2rem;
+  height: 11.8rem;
+}
+.Svid-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.Svid-detail-text {
+  font-size: 24px;
+  font-weight: 600;
+}
+.Svid-detail-des {
+  font-size: 14px;
+  padding-right: 7rem;
+  color: gray;
+}
+.Svid-chanel-box {
+  display: flex;
+  color: gray;
+  gap: 1rem;
+  font-size: 14px;
+  align-items: center;
+  font-weight: 500;
+}
+.schanel-icon {
+}
+.chanel-logo {
+  border-radius: 3rem;
+  width: 2.5rem;
+}
+
+/* Error */
+.Error-Container {
+  background-image: url("./images/Error.jpg");
+  position: absolute;
+  top: 3.6rem;
+  background-size: cover;
+  height: 92.3vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
